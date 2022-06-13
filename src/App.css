@@ -37,10 +37,41 @@ input {
   border: 1px solid #ccc;
 }
 
-.display {
-  height: 400px;
-  width: 80%;
-  margin: 50px auto;
-  display: block;
-  border: 3px solid #000;
+
+/*
+************
+    cvContainer
+************
+*/
+.cvContainer {
+  position: relative;
+  display: flex;
 }
+
+
+/*
+************
+    inData
+************
+*/
+
+.inData {
+  width: 30%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-right: 3%;
+}
+
+
+
+/*
+************
+    outData
+************
+*/
+.outData {
+  width: 60%;
+  border: 1px solid #ccc;
+}
+
+
