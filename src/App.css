@@ -77,11 +77,24 @@ input {
   left: 10%;
   position: absolute;
 
-  top: 500px;
+  top: 1000px;
+  height: 1000px;
+
 }
 
 .cvData {
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+
+.expAndBio {
+  grid-column: span 8;
+}
+
+.aside {
+  grid-columns: span 4;
 }
 
 .cvData > div {

@@ -3,6 +3,8 @@ import './App.css';
 
 function App() {
 
+  const remainder = "https://ibaslogic.com/simple-guide-to-react-form/ dodati ovaj oblik prigaza podataka u sekciju za iskustvo i edukaciju, srediti style iz FIGMA fajla"
+  console.log(remainder);
   const [formData, setFormData] = useState(
     {
       firstName: "",
@@ -14,6 +16,11 @@ function App() {
       expirience: "",
       employment: "",
       position: "",
+      industryKnowledge: "",
+      toolsAndTechnologies: "",
+      otherSkills: "",
+      languages: "",
+      social: "",
     }
   )
 
@@ -57,7 +64,7 @@ function App() {
           <form onSubmit={handleSubmit}>
 
             <input
-              className="inputHalf"
+              className="inputFull"
               type="text"
               placeholder="First Name"
               name="firstName"
@@ -67,7 +74,7 @@ function App() {
 
 
             <input
-              className="inputHalf"
+              className="inputFull"
               type="text"
               placeholder="Last Name"
               name="lastName"
@@ -172,30 +179,88 @@ function App() {
               <option value="Senior">Senior</option>
             </select>
 
+            <br />
+            <label htmlFor="industryKnowlage">Industry Knowlage</label>
+            <input
+              className="inputFull"
+              id="industryKnowlage"
+              value={formData.industryKnowlage}
+              onChange={handleChange}
+              name="industryKnowlage"
+            />
 
+            <label htmlFor="toolsAndTechnologies">toolsAndTechnologies</label>
+            <input
+              className="inputFull"
+              id="toolsAndTechnologies"
+              value={formData.toolsAndTechnologies}
+              onChange={handleChange}
+              name="toolsAndTechnologies"
+            />
+
+            <label htmlFor="otherSkills">otherSkills</label>
+            <input
+              className="inputFull"
+              id="otherSkills"
+              value={formData.otherSkills}
+              onChange={handleChange}
+              name="otherSkills"
+            />
+
+            <label htmlFor="languages">languages</label>
+            <input
+              className="inputFull"
+              id="languages"
+              value={formData.languages}
+              onChange={handleChange}
+              name="languages"
+            />
+
+            <label htmlFor="social">social</label>
+            <input
+              className="inputFull"
+              id="social"
+              value={formData.social}
+              onChange={handleChange}
+              name="social"
+            />
             <button>Submit data</button>
           </form>
         </div>
 
         <div className="outData">
-          
-          <div className="cvData">
+
+          <div className="header">
             <div className="userFirstName">{formData.firstName}</div>
             <div className="userLastName">{formData.lastName}</div>
             <div className="userTitle">{formData.title}</div>
-            <div className="userBio">{formData.bio}</div>
-            <div className="userContact">{formData.contact}</div>
-            <div className="userEducation">{formData.education}</div>
-            <div className="userExp">{formData.expirience ? "Yes" : "No"}</div>
-            <div className="userEmployment">{formData.employment}</div>
-            <div className="userPosition">{formData.position}</div>
+            <div className="userExp">pomeri{formData.expirience ? "Yes" : "No"}</div>
+            <div className="userEmployment">pomeri{formData.employment}</div>
           </div>
-          
-        </div>
+
+          <div className="cvData">
+
+            <div className="expAndBio">
+              <div className="userBio">{formData.bio}</div>
+              <div className="userEducation">{formData.education}</div>
+            </div>{/* expAndBio*/}
+
+            <div className="aside">
+              <div className="asideItem userContact">{formData.contact}</div>
+              <div className="asideItem userIndustryKnowlage">{formData.industryKnowledge}</div>
+              <div className="asideItem userToolsAndTechnologies">{formData.toolsAndTechnologies}</div>
+              <div className="asideItem userOtherSkills">{formData.otherSkills}</div>
+              <div className="asideItem userLanguages">{formData.languages}</div>
+              <div className="asideItem userSocial">{formData.social}</div>
+
+              <div className="userPosition">promeni{formData.position}</div>
+            </div>{/*.aside */}
+          </div>{/* .cvData */}
+
+        </div>{/* .outData*/}
 
 
-      </div>
-
+      </div>{/* cvContainer */}
 
     </div>
   );
