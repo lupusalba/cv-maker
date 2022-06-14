@@ -178,13 +178,19 @@ function App() {
         </div>
 
         <div className="outData">
-
-          <div className="userFirstName">{formData.firstName}</div>
-          <div className="userLastName">{formData.lastName}</div>
-          <div className="userTitle">{formData.title}</div>
-          <div className="userBio">{formData.bio}</div>
-
-
+          
+          <div className="cvData">
+            <div className="userFirstName">{formData.firstName}</div>
+            <div className="userLastName">{formData.lastName}</div>
+            <div className="userTitle">{formData.title}</div>
+            <div className="userBio">{formData.bio}</div>
+            <div className="userContact">{formData.contact}</div>
+            <div className="userEducation">{formData.education}</div>
+            <div className="userExp">{formData.expirience ? "Yes" : "No"}</div>
+            <div className="userEmployment">{formData.employment}</div>
+            <div className="userPosition">{formData.position}</div>
+          </div>
+          
         </div>
 
 

@@ -56,10 +56,11 @@ input {
 */
 
 .inData {
-  width: 30%;
+  width: 70%;
   padding: 15px;
   border: 1px solid #ccc;
-  margin-right: 3%;
+  left: 15%;
+  position: absolute;
 }
 
 
@@ -70,8 +71,67 @@ input {
 ************
 */
 .outData {
-  width: 60%;
+  width: 80%;
+  padding: 15px;
   border: 1px solid #ccc;
+  left: 10%;
+  position: absolute;
+
+  top: 500px;
 }
 
+.cvData {
+  position: relative;
+}
 
+.cvData > div {
+  border-top: 1px solid #ccc;
+  padding: 5px;
+  min-height: 20px;
+  min-width: 20px;
+  margin: 5px;
+}
+
+.userFirstName {
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.userLastName {
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.userTitle {
+  font-size: 2em;
+}
+
+.userBio {
+  font-size: 1.5em;
+}
+
+.userContact {
+
+}
+
+.userEducation {
+
+}
+
+.userExp {
+
+}
+
+.userEmployment {
+
+}
+
+.userPosition {
+
+}
