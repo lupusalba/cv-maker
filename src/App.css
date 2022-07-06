@@ -1,6 +1,8 @@
 
 * {
   box-sizing: border-box;
+
+  
 }
 
 input {
@@ -78,11 +80,23 @@ input {
   position: absolute;
 
   top: 1000px;
-  height: 1000px;
+  min-height: 1000px;
+  height: 100%;
 
 }
 
-.cvData {
+.border > * {
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 5px;
+}
+
+.horizontalDivider {
+  border: 3px dashed #ccc;
+  margin: 1px 0;
+}
+
+.cvMainContent {
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -94,7 +108,8 @@ input {
 }
 
 .aside {
-  grid-columns: span 4;
+  grid-column: span 4;
+  width: 100%;
 }
 
 .cvData > div {
@@ -127,6 +142,7 @@ input {
 
 .userBio {
   font-size: 1.5em;
+  
 }
 
 .userContact {
@@ -147,4 +163,17 @@ input {
 
 .userPosition {
 
+}
+
+
+/****************
+    ASIDE
+****************/
+.asideItemElement {
+  padding: 5px;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  margin: 3px;
+  display: list-item;
 }

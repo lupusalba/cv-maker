@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import './App.css';
 
 function App() {
@@ -6,23 +6,30 @@ function App() {
   const remainder = "https://ibaslogic.com/simple-guide-to-react-form/ dodati ovaj oblik prigaza podataka u sekciju za iskustvo i edukaciju, srediti style iz FIGMA fajla"
   console.log(remainder);
   const [formData, setFormData] = useState(
+    () => JSON.parse(localStorage.getItem(""))//formData
+      ||
     {
-      firstName: "",
-      lastName: "",
+      firstName: "Ime",
+      lastName: "Prezime",
       hasPracticalExpirience: false,
-      bio: "",
-      contact: "",
-      education: "",
-      expirience: "",
+      bio: "Biografija biografija, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      contact: "+000 111 2222 323, e@mail.com",
+      education: "education, education, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      expirience: "expirience, expirience, expirience",
       employment: "",
       position: "",
-      industryKnowledge: "",
-      toolsAndTechnologies: "",
-      otherSkills: "",
-      languages: "",
-      social: "",
+      industryKnowledge: "industy, Knowlage",
+      toolsAndTechnologies: "tools, and, tehnologies",
+      otherSkills: "other, skills",
+      languages: "llanguages, languages",
+      social: "social, skills",
     }
   )
+
+  // useEffect( () => {
+  //   localStorage.setItem("formData", JSON.stringify(formData))
+  // }, [formData])
+
 
 
   function handleChange(event) {
@@ -230,7 +237,7 @@ function App() {
 
         <div className="outData">
 
-          <div className="header">
+          <div className="border header">
             <div className="userFirstName">{formData.firstName}</div>
             <div className="userLastName">{formData.lastName}</div>
             <div className="userTitle">{formData.title}</div>
@@ -238,20 +245,46 @@ function App() {
             <div className="userEmployment">pomeri{formData.employment}</div>
           </div>
 
-          <div className="cvData">
+          <div className="cvMainContent">
 
-            <div className="expAndBio">
+            <div className="border expAndBio">
               <div className="userBio">{formData.bio}</div>
+              <div className="horizontalDivider"></div>
               <div className="userEducation">{formData.education}</div>
             </div>{/* expAndBio*/}
 
-            <div className="aside">
-              <div className="asideItem userContact">{formData.contact}</div>
-              <div className="asideItem userIndustryKnowlage">{formData.industryKnowledge}</div>
-              <div className="asideItem userToolsAndTechnologies">{formData.toolsAndTechnologies}</div>
-              <div className="asideItem userOtherSkills">{formData.otherSkills}</div>
-              <div className="asideItem userLanguages">{formData.languages}</div>
-              <div className="asideItem userSocial">{formData.social}</div>
+            <div className="border aside">
+
+              <div className="asideItem userContact">
+
+                <span className="asideItemElement">{
+                  formData.contact
+                }
+                </span>
+              </div>
+
+
+
+              <div className="asideItem userIndustryKnowlage">Title ----
+                <span className="asideItemElement">{formData.industryKnowledge}</span>
+              </div>
+
+              <div className="asideItem userToolsAndTechnologies">Title ----
+                <span className="asideItemElement">{formData.toolsAndTechnologies}</span>
+              </div>
+
+              <div className="asideItem userOtherSkills">Title ----
+                <span className="asideItemElement">{formData.otherSkills}</span>
+              </div>
+
+              <div className="asideItem userLanguages">Title ----
+                <span className="asideItemElement">{formData.languages}</span>
+              </div>
+
+              <div className="asideItem userSocial">Title ----
+                <span className="asideItemElement">
+                  {formData.social}</span>
+              </div>
 
               <div className="userPosition">promeni{formData.position}</div>
             </div>{/*.aside */}
