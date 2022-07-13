@@ -14,8 +14,8 @@ function App() {
       hasPracticalExpirience: false,
       bio: "Biografija biografija, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
       contact: "+000 111 2222 323, e@mail.com",
-      education: "education, education, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-      expirience: "expirience, expirience, expirience",
+      education: ["education, education, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "],
+      expirience: ["expirience, expirience, expirience"],
       employment: "",
       position: "",
       industryKnowledge: "industy, Knowlage",
@@ -30,6 +30,20 @@ function App() {
   //   localStorage.setItem("formData", JSON.stringify(formData))
   // }, [formData])
 
+
+  const []
+
+  // add another item
+  const addAnotherItemToTheList = (AnotherItem) => {
+    const id = Math.floor(Math.random() * 10000) + 1
+    const newItem = { id, ...AnotherItem }
+    setAnotherItem ([...AnotherItem], newItem)
+  }
+
+  // delete the existing item
+  const deleteItemFromTheList = (id) => {
+    setAnotherItem()
+  }
 
 
   function handleChange(event) {
@@ -115,6 +129,7 @@ function App() {
               onChange={handleChange}
               value={formData.contact}
             />
+            <button className="btnAdd">Add</button>
 
 
             <input
@@ -125,6 +140,7 @@ function App() {
               onChange={handleChange}
               value={formData.education}
             />
+            <button className="btnAdd">Add</button>
 
             <input
               className="inputFull"
@@ -134,6 +150,7 @@ function App() {
               onChange={handleChange}
               value={formData.expirience}
             />
+            <button className="btnAdd">Add</button>
 
             <br />
             <br />
@@ -195,6 +212,7 @@ function App() {
               onChange={handleChange}
               name="industryKnowlage"
             />
+            <button className="btnAdd">Add</button>
 
             <label htmlFor="toolsAndTechnologies">toolsAndTechnologies</label>
             <input
@@ -204,6 +222,7 @@ function App() {
               onChange={handleChange}
               name="toolsAndTechnologies"
             />
+            <button className="btnAdd">Add</button>
 
             <label htmlFor="otherSkills">otherSkills</label>
             <input
@@ -213,6 +232,7 @@ function App() {
               onChange={handleChange}
               name="otherSkills"
             />
+            <button className="btnAdd">Add</button>
 
             <label htmlFor="languages">languages</label>
             <input
@@ -222,6 +242,7 @@ function App() {
               onChange={handleChange}
               name="languages"
             />
+            <button className="btnAdd">Add</button>
 
             <label htmlFor="social">social</label>
             <input
@@ -231,7 +252,9 @@ function App() {
               onChange={handleChange}
               name="social"
             />
-            <button>Submit data</button>
+            <button className="btnAdd">Add</button>
+
+            <button type="submit">Submit data</button>
           </form>
         </div>
 
