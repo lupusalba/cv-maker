@@ -1,179 +1,129 @@
-
 * {
   box-sizing: border-box;
-
-  
-}
-
-input {
-  line-height: 40px;
-  vertical-align: text-bottom;
-}
-
-.inputHalf {
-  display: inline;
-  width: 49%;
-  height: 40px;
-  margin-bottom: 10px;
-  
-  border: 1px solid #ccc;
-}
-
-.inputHalf:nth-of-type(2){
-  margin-left: 2%;
-}
-
-.inputFull {
-  display: block;
-  width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
-
-  border: 1px solid #ccc;
-}
-
-.textarea {
-  height: 100px;
-  width: 90%;
-  margin: 15px 5%;
-  border: 1px solid #ccc;
-}
-
-
-/*
-************
-    cvContainer
-************
-*/
-.cvContainer {
-  position: relative;
-  display: flex;
-}
-
-
-/*
-************
-    inData
-************
-*/
-
-.inData {
-  width: 70%;
-  padding: 15px;
-  border: 1px solid #ccc;
-  left: 15%;
-  position: absolute;
-}
-
-
-
-/*
-************
-    outData
-************
-*/
-.outData {
-  width: 80%;
-  padding: 15px;
-  border: 1px solid #ccc;
-  left: 10%;
-  position: absolute;
-
-  top: 1000px;
-  min-height: 1000px;
-  height: 100%;
+  font-family: 'Poppins', sans-serif;
 
 }
 
-.border > * {
-  padding: 10px;
+body {
+  font-size: 18px;
+}
+
+ul {
+  padding: 0
+}
+
+li {
+  list-style: none
+}
+
+
+/************************
+    APP
+************************/
+.App {
+  background-color: #C9C5BA;
+}
+
+/************************
+    cvWrapper
+************************/
+.cvWrapper {
   border: 1px solid #000;
-  margin: 5px;
+  background-color: #ECEBE9;
+  width: 1240px;
+  height: 1754px;
+  margin: 0 auto;
 }
 
-.horizontalDivider {
-  border: 3px dashed #ccc;
-  margin: 1px 0;
-}
-
-.cvMainContent {
-  position: relative;
+/************************
+    grid
+************************/
+.grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
+  gap: 30px;
 }
 
-.expAndBio {
-  grid-column: span 8;
-}
-
-.aside {
-  grid-column: span 4;
-  width: 100%;
-}
-
-.cvData > div {
-  border-top: 1px solid #ccc;
-  padding: 5px;
-  min-height: 20px;
-  min-width: 20px;
-  margin: 5px;
-}
-
-.userFirstName {
-  height: 40px;
-  line-height: 40px;
-  width: 100%;
-  font-size: 3em;
-  font-weight: bold;
-}
-
-.userLastName {
-  height: 40px;
-  line-height: 40px;
-  width: 100%;
-  font-size: 4em;
-  font-weight: bold;
-}
-
-.userTitle {
-  font-size: 2em;
-}
-
-.userBio {
-  font-size: 1.5em;
-  
-}
-
-.userContact {
-
-}
-
-.userEducation {
-
-}
-
-.userExp {
-
-}
-
-.userEmployment {
-
-}
-
-.userPosition {
-
-}
-
-
-/****************
-    ASIDE
-****************/
-.asideItemElement {
-  padding: 5px;
-  background-color: #000;
+.gridItem {
   border: 1px solid #000;
+  grid-column: span 6;
+  width: 100%;
+}
+
+
+
+
+/************************
+    main
+************************/
+
+
+#profileImage > img {
+  height: auto;
+  width: 100%;
+}
+
+.company {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.skillWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skillName { width: 40%; } 
+
+.percentContainer {
+  width: 100%;
+  background-color: #c3c3c3;
+  margin-top: 10px;
+}
+
+.skill {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #fff;
-  margin: 3px;
-  display: list-item;
+}
+
+.skill1 {width: 90%; background-color: #242021;}
+.skill2 {width: 70%; background-color: #242021;}
+.skill3 {width: 60%; background-color: #242021;}
+.skill4 {width: 40%; background-color: #242021;}
+.skill5 {width: 30%; background-color: #242021;}
+
+
+
+/************************
+    Aside
+************************/
+
+#aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.subSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+.basicInfo {
+  padding-top: 100px;
 }
