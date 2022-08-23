@@ -31,8 +31,7 @@ function App() {
   // }, [formData])
 
 
-  const []
-
+    const [anotherItem, setAnotherItem] = useState("")
   // add another item
   const addAnotherItemToTheList = (AnotherItem) => {
     const id = Math.floor(Math.random() * 10000) + 1
