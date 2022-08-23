@@ -3,46 +3,46 @@ import './App.css';
 
 function App() {
 
-  // const remainder = "https://ibaslogic.com/simple-guide-to-react-form/ dodati ovaj oblik prigaza podataka u sekciju za iskustvo i edukaciju, srediti style iz FIGMA fajla"
-  // console.log(remainder);
-  // const [formData, setFormData] = useState(
-  //   () => JSON.parse(localStorage.getItem(""))//formData
-  //     ||
-  //   {
-  //     firstName: "Ime",
-  //     lastName: "Prezime",
-  //     hasPracticalExpirience: false,
-  //     bio: "Biografija biografija, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-  //     contact: "+000 111 2222 323, e@mail.com",
-  //     education: ["education, education, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "],
-  //     expirience: ["expirience, expirience, expirience"],
-  //     employment: "",
-  //     position: "",
-  //     industryKnowledge: "industy, Knowlage",
-  //     toolsAndTechnologies: "tools, and, tehnologies",
-  //     otherSkills: "other, skills",
-  //     languages: "llanguages, languages",
-  //     social: "social, skills",
-  //   }
-  // )
+  const remainder = "https://ibaslogic.com/simple-guide-to-react-form/ dodati ovaj oblik prigaza podataka u sekciju za iskustvo i edukaciju, srediti style iz FIGMA fajla"
+  console.log(remainder);
+  const [formData, setFormData] = useState(
+    () => JSON.parse(localStorage.getItem(""))//formData
+      ||
+    {
+      firstName: "Ime",
+      lastName: "Prezime",
+      hasPracticalExpirience: false,
+      bio: "Biografija biografija, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      contact: "+000 111 2222 323, e@mail.com",
+      education: ["education, education, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "],
+      expirience: ["expirience, expirience, expirience"],
+      employment: "",
+      position: "",
+      industryKnowledge: "industy, Knowlage",
+      toolsAndTechnologies: "tools, and, tehnologies",
+      otherSkills: "other, skills",
+      languages: "llanguages, languages",
+      social: "social, skills",
+    }
+  )
 
-  // // useEffect( () => {
-  // //   localStorage.setItem("formData", JSON.stringify(formData))
-  // // }, [formData])
+  // useEffect( () => {
+  //   localStorage.setItem("formData", JSON.stringify(formData))
+  // }, [formData])
 
 
-  //   const [anotherItem, setAnotherItem] = useState("")
-  // // add another item
-  // const addAnotherItemToTheList = (AnotherItem) => {
-  //   const id = Math.floor(Math.random() * 10000) + 1
-  //   const newItem = { id, ...AnotherItem }
-  //   setAnotherItem ([...AnotherItem], newItem)
-  // }
+    const [anotherItem, setAnotherItem] = useState("")
+  // add another item
+  const addAnotherItemToTheList = (AnotherItem) => {
+    const id = Math.floor(Math.random() * 10000) + 1
+    const newItem = { id, ...AnotherItem }
+    setAnotherItem ([...AnotherItem], newItem)
+  }
 
-  // // delete the existing item
-  // const deleteItemFromTheList = (id) => {
-  //   setAnotherItem()
-  // }
+  // delete the existing item
+  const deleteItemFromTheList = (id) => {
+    setAnotherItem()
+  }
 
 
   function handleChange(event) {
@@ -80,7 +80,7 @@ function App() {
     <div className="App">
 
       <div className="cvContainer">
-        {/* <div className="inData">
+        <div className="inData">
           <form onSubmit={handleSubmit}>
 
             <input
@@ -255,7 +255,7 @@ function App() {
 
             <button type="submit">Submit data</button>
           </form>
-        </div> */}
+        </div>
 
         <div className="outData">
 
