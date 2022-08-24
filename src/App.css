@@ -169,6 +169,13 @@ form {
   border: 1px solid #ccc;
 }
 
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+
 .inputText {
   height: 40px;
   line-height: 40px;

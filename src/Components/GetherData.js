@@ -8,96 +8,98 @@ const GetherData = () => {
   const [formData, setFormData] = useState(
     () => JSON.parse(localStorage.getItem(""))//formData
       ||
-    {
-      firstName: "",
-      lastName: "",
-      dateOfBirth: "",
-      contact: {
-        phone: "",
-        email: "",
-        address: "",
-        website: "",
-        socialLinks: [""]
-      },
-      bio: "",
-      education: [
-        {
-          educationInstitution: "",
-          title: "",
-          degree: ""
-        }
-      ],
-      employmentStatus: "",
-      jobTitle: "",
-      personalValues: [""],
-      expertise: [""],
-      skills: [
-        { skill: "", percentage: 0 }
-      ],
-      languages: [""],
-      interests: [""],
-      workExpirience: [
-        {
-          company: "",
-          position: "",
-          description: ""
-        }
-      ]
-    }
-
-    // backup
     // {
-    //   firstName: "Ime",
-    //   lastName: "Prezime",
-    //   dateOfBirth: "august 22, 1999",
+    //   firstName: "",
+    //   lastName: "",
+    //   dateOfBirth: "",
     //   contact: {
-    //     phone: "+123-456-789",
-    //     email: "email@example.com",
-    //     address: "street 55, city00",
-    //     website: "http://example.com",
-    //     socialLinks: ["gacebook", "instagram", "twitter"]
+    //     phone: "a",
+    //     email: "",
+    //     address: "",
+    //     website: "",
+    //     socialLinks: [""]
     //   },
-    //   bio: "Biografija biografija, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    //   bio: "",
     //   education: [
     //     {
-    //       educationInstitution: "univeristy",
-    //       title: "Graphic Designer",
-    //       degree: "type of degree"
+    //       educationInstitution: "",
+    //       title: "",
+    //       degree: ""
     //     }
     //   ],
-    //   employmentStatus: "Looking for Job",
-    //   jobTitle: "designer",
-    //   personalValues: ["value1", "value2", "value3"],
-    //   expertise: ["expertise1", "expertise2", "expertise3"],
+    //   employmentStatus: "",
+    //   jobTitle: "",
+    //   personalValues: [""],
+    //   expertise: [""],
     //   skills: [
-    //     { skill: "html", percentage: 100 },
-    //     { skill: "css3", percentage: 88 },
-    //     { skill: "JavaScript", percentage: 75 },
-    //     { skill: "Figma", percentage: 70 },
-    //     { skill: "Photoshop", percentage: 50 }
+    //     { skill: "", percentage: 0 }
     //   ],
-    //   languages: "llanguages, languages",
-    //   interests: ["interests1", "interests2", "interests3"],
+    //   languages: [""],
+    //   interests: [""],
     //   workExpirience: [
     //     {
-    //       company: "company",
-    //       position: "job title",
-    //       description: "description lorem ipsum dolor sit amet"
-    //     },
-    //     {
-    //       company: "company",
-    //       position: "job title",
-    //       description: "description lorem ipsum dolor sit amet"
-    //     },
-    //     {
-    //       company: "company",
-    //       position: "job title",
-    //       description: "description lorem ipsum dolor sit amet"
+    //       company: "",
+    //       position: "",
+    //       description: ""
     //     }
     //   ]
     // }
+
+
+    // backup
+    {
+      firstName: "Ime",
+      lastName: "Prezime",
+      dateOfBirth: "august 22, 1999",
+      contact: {
+        phone: "+123-456-789",
+        email: "email@example.com",
+        address: "street 55, city00",
+        website: "http://example.com",
+        socialLinks: ["gacebook", "instagram", "twitter"]
+      },
+      bio: "Biografija biografija, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      education: [
+        {
+          educationInstitution: "univeristy",
+          title: "Graphic Designer",
+          degree: "type of degree"
+        }
+      ],
+      employmentStatus: "Looking for Job",
+      jobTitle: "designer",
+      personalValues: ["value1", "value2", "value3"],
+      expertise: ["expertise1", "expertise2", "expertise3"],
+      skills: [
+        { skill: "html", percentage: 100 },
+        { skill: "css3", percentage: 88 },
+        { skill: "JavaScript", percentage: 75 },
+        { skill: "Figma", percentage: 70 },
+        { skill: "Photoshop", percentage: 50 }
+      ],
+      languages: "llanguages, languages",
+      interests: ["interests1", "interests2", "interests3"],
+      workExpirience: [
+        {
+          company: "company",
+          position: "job title",
+          description: "description lorem ipsum dolor sit amet"
+        },
+        {
+          company: "company",
+          position: "job title",
+          description: "description lorem ipsum dolor sit amet"
+        },
+        {
+          company: "company",
+          position: "job title",
+          description: "description lorem ipsum dolor sit amet"
+        }
+      ]
+    }
   )
 
+  console.log(formData.contact.phone)
   console.log(formData)
 
   const handleSubmitTest = (e) => {
@@ -129,6 +131,12 @@ const GetherData = () => {
 
     console.log("changed")
   }
+
+
+
+
+
+
 
 
 
@@ -199,7 +207,7 @@ const GetherData = () => {
             onChange={handleChange}
             value={formData.contact.phone}
             type="text"
-            className="inputText"
+            className="inputText fullWidth"
             placeholder="phone"
           />
 
@@ -217,7 +225,7 @@ const GetherData = () => {
           <input
             name="addres"
             onChange={handleChange}
-            value={formData.contact.addres}
+            value={formData.contact.address}
             type="text"
             className="inputText"
             placeholder="addres"
@@ -252,6 +260,7 @@ const GetherData = () => {
 
           <label htmlFor="educationInstitution">educationInstitution</label>
           <input
+            id="educationInstitution"
             name="educationInstitution"
             onChange={handleChange}
             value={formData.education[0].educationInstitution}
@@ -279,7 +288,6 @@ const GetherData = () => {
             className="inputText"
             placeholder="degree"
           />
-          <button type="button">add another</button>
         </fieldset>
 
 
@@ -287,6 +295,7 @@ const GetherData = () => {
           <legend>PersonalValues</legend>
 
           <label htmlFor="personalValues">personalValues</label>
+          (*divide by , )
           <input
             name="personalValues"
             onChange={handleChange}
@@ -333,6 +342,8 @@ const GetherData = () => {
             className="inputText"
             placeholder="percentage"
           />
+
+          
 
         </fieldset>
 
@@ -396,6 +407,8 @@ const GetherData = () => {
             className="inputText fullWidth"
             placeholder="description"
           />
+
+          
         </fieldset>
 
         <button type="submit" onClick={handleSubmitTest}>Submit</button>
