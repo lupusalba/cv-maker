@@ -17,6 +17,13 @@ li {
 }
 
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
 /************************
     APP
 ************************/
@@ -34,6 +41,7 @@ li {
   height: 1754px;
   margin: 0 auto;
 
+  display: none;
 }
 
 /************************
@@ -146,4 +154,33 @@ li {
 
 .basicInfo {
   padding-top: 100px;
+}
+
+
+/************************
+    getherData.js
+************************/
+#GetherData {
+  border: 1px solid #000;
+  padding: 50px;
+}
+
+form {
+  border: 1px solid #ccc;
+}
+
+.inputText {
+  height: 40px;
+  line-height: 40px;
+
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.bio {
+  height: 300px;
+  width: 500px;
+  font-size: 1em;
 }

@@ -257,62 +257,7 @@ function App() {
           </form>
         </div>
 
-        <div className="outData">
 
-          <div className="border header">
-            <div className="userFirstName">{formData.firstName}</div>
-            <div className="userLastName">{formData.lastName}</div>
-            <div className="userTitle">{formData.title}</div>
-            <div className="userExp">pomeri{formData.expirience ? "Yes" : "No"}</div>
-            <div className="userEmployment">pomeri{formData.employment}</div>
-          </div>
-
-          <div className="cvMainContent">
-
-            <div className="border expAndBio">
-              <div className="userBio">{formData.bio}</div>
-              <div className="horizontalDivider"></div>
-              <div className="userEducation">{formData.education}</div>
-            </div>{/* expAndBio*/}
-
-            <div className="border aside">
-
-              <div className="asideItem userContact">
-
-                <span className="asideItemElement">{
-                  formData.contact
-                }
-                </span>
-              </div>
-
-
-
-              <div className="asideItem userIndustryKnowlage">Title ----
-                <span className="asideItemElement">{formData.industryKnowledge}</span>
-              </div>
-
-              <div className="asideItem userToolsAndTechnologies">Title ----
-                <span className="asideItemElement">{formData.toolsAndTechnologies}</span>
-              </div>
-
-              <div className="asideItem userOtherSkills">Title ----
-                <span className="asideItemElement">{formData.otherSkills}</span>
-              </div>
-
-              <div className="asideItem userLanguages">Title ----
-                <span className="asideItemElement">{formData.languages}</span>
-              </div>
-
-              <div className="asideItem userSocial">Title ----
-                <span className="asideItemElement">
-                  {formData.social}</span>
-              </div>
-
-              <div className="userPosition">promeni{formData.position}</div>
-            </div>{/*.aside */}
-          </div>{/* .cvData */}
-
-        </div>{/* .outData*/}
 
 
       </div>{/* cvContainer */}

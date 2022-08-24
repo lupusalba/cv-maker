@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 import "./App.css";
 
 import CVResult from "./Components/CVResult";
