@@ -7,6 +7,9 @@ function App() {
     <div className="App">
       <div className="cvWrapper">
         <div className="grid">
+
+          <div className="greeting"><p className="rotated">Hello,</p></div>
+
           <div id="main" className="gridItem">
             <div className="sectionContainer">
               <div id="profileImage">
